@@ -13,7 +13,6 @@ async def forward_to_admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await context.bot.send_message(chat_id=ADMIN_CHAT_ID, text=text)
 
-    # Reply to user with confirmation and unique link
     link = f"https://t.me/questianonbot?start={user.id}"
     response = (
         "✅ Question sent!\n\n"
